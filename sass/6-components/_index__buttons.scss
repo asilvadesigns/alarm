@@ -1,0 +1,15 @@
+.btn {
+	display: inline-block;
+	padding: rhythm(.25) rhythm(.5);
+	@include border-radius(rhythm(.15));
+}
+
+.btn--primary {
+	@extend .btn;
+	@include transition(background-color ease-in-out .1s);
+	color: white;
+	background-color: $btn--primary__bg;
+	&:hover, &:active, &:focus {
+		background-color: darken($btn--primary__bg, 5%);
+	}
+}

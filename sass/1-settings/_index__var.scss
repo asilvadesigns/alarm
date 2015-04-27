@@ -1,0 +1,38 @@
+////////////////////////////////////////////
+//
+//  Typography
+$base-font-size: 16px;
+$base-line-unit: 1.333;
+$base-line-height: $base-font-size * $base-line-unit;
+
+$rhythm-unit: "em";
+$round-to-nearest-half-line: true;
+
+$h1: 3.157;
+$h2: 2.369;
+$h3: 1.777;
+$h4: 1.333;
+$h5: 1;
+$h6: .75;
+
+////////////////////////////////////////////
+//
+//  Color
+
+$blue: deepskyblue;
+$grey: #374140;
+
+$primary__color: $blue;
+$neutral__color: $grey;
+
+$element__body__bg: lighten($neutral__color,60%);
+
+$site__header__bg: $primary__color;
+$site__content__bg: white;
+$site__footer__bg: lighten($neutral__color,60%);
+
+$heading--primary__color: $primary__color;
+$heading--secondary__color: $neutral__color;
+
+$btn--primary__bg: $primary__color;
+

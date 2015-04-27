@@ -1,0 +1,13 @@
+.heading {
+
+}
+
+.heading--primary {
+	// @extend .heading;
+	color: $heading--primary__color;
+}
+
+.heading--secondary {
+	// @extend .heading;
+	color: $heading--secondary__color;
+}

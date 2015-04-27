@@ -1,0 +1,13 @@
+.counter__reset {
+	counter-reset: section;
+}
+.counter__increment {
+	position: relative;
+	&:before {
+		position: absolute;
+		left: rhythm(1) * -1;
+		font-weight: bold;
+		counter-increment: section;
+		content: counter(section);
+	}
+}

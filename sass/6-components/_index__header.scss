@@ -1,0 +1,7 @@
+.site__header {
+	@include rhythm-padding(1);
+	background-color: $site__header__bg;
+	.heading {
+		color: white;
+	}
+}

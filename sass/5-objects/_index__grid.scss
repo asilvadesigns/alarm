@@ -1,0 +1,10 @@
+.content__wrapper {
+	margin: 0 auto;
+	max-width: 32em;
+}
+
+.content__section {
+	& + & {
+		@include margin-leader(2);
+	}
+}

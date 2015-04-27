@@ -1,0 +1,4 @@
+.site__footer {
+	@include rhythm-padding(2,1);
+	background-color: $site__footer__bg;
+}
