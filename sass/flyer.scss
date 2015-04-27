@@ -3,33 +3,33 @@
 @import "compass/typography";
 
 //  Settings
-@import "1-settings/flyer__var";
+@import "1-settings/flyer/var";
 
 //  Tools
-@import "2-tools/mixin";
-@import "2-tools/flyer__helper";
+@import "2-tools/flyer/mixin";
+@import "2-tools/flyer/helper";
 
 //  Generic
 @import "3-generic/reset";
 
 //  Base
-@import "4-base/flyer__typography";
+@import "4-base/flyer/typography";
 
 //  Objects
 @import "5-objects/bootstrap";
 @import "5-objects/font-awesome";
 //
-@import "5-objects/flyer__list";
-@import "5-objects/flyer__grid";
-@import "5-objects/flyer__image";
+@import "5-objects/flyer/list";
+@import "5-objects/flyer/grid";
+@import "5-objects/flyer/image";
 
 //  Components
-@import "6-components/flyer__header";
-@import "6-components/flyer__content";
-@import "6-components/flyer__footer";
+@import "6-components/flyer/header";
+@import "6-components/flyer/content";
+@import "6-components/flyer/footer";
 //
-@import "6-components/flyer__heading";
-@import "6-components/flyer__buttons";
+@import "6-components/flyer/heading";
+@import "6-components/flyer/buttons";
 
 
 

@@ -3,33 +3,33 @@
 @import "compass/typography";
 
 //  Settings
-@import "1-settings/index__var";
+@import "1-settings/index/var";
 
 //  Tools
-@import "2-tools/mixin";
-@import "2-tools/helper";
+// @import "2-tools/mixin";
+// @import "2-tools/helper";
 
 //  Generic
 @import "3-generic/reset";
 
 //  Base
-@import "4-base/index__typography";
+@import "4-base/index/typography";
 
 //  Objects
 @import "5-objects/bootstrap";
 @import "5-objects/font-awesome";
 //
-@import "5-objects/counter";
-@import "5-objects/index__list";
-@import "5-objects/index__grid";
+@import "5-objects/index/counter";
+@import "5-objects/index/list";
+@import "5-objects/index/grid";
 
 //  Components
-@import "6-components/index__content";
-@import "6-components/index__header";
-@import "6-components/index__footer";
+@import "6-components/index/content";
+@import "6-components/index/header";
+@import "6-components/index/footer";
 //
-@import "6-components/index__buttons";
-@import "6-components/index__heading";
+@import "6-components/index/buttons";
+@import "6-components/index/heading";
 
 
 
