@@ -1,4 +1,7 @@
 .site__content {
 	@include rhythm-padding(2);
 	background-color: $site__content__bg;
+	.content__wrapper {
+		padding-left: rhythm(2);
+	}
 }
