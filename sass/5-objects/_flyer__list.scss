@@ -1,0 +1,23 @@
+.list--inline {
+	> li {
+		display: inline-block;
+	}
+}
+
+.list--bulleted {
+	list-style: none;	
+	@include media(large) {
+		padding-left: rhythm(.75);
+		li {
+			position: relative;
+			&:before {
+				content: "\2022";
+				position: absolute;
+				left: rhythm(.75) * -1;
+			}
+		}
+	}
+	li + li {
+		@include margin-leader(.5);
+	}
+}

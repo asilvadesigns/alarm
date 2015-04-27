@@ -1,0 +1,31 @@
+.image {
+	max-width: 100%;
+}
+.image--logo {
+	@extend .image;
+	@include margin-trailer(1);
+	display: none;
+	@include media (large) {
+		display: block;
+		@include margin-trailer(0);
+	}
+
+}
+.image--phone {
+	@extend .image;
+	@include margin-leader(1.5);
+	position: relative;
+	z-index: 10;
+	display: none;
+	@include media (large) {
+		display: block;
+	}
+}
+
+.logo--horz {
+	display: block;
+	max-width: rhythm(13);
+	@include media(large) {
+		display: none;
+	}
+}

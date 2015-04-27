@@ -1,0 +1,10 @@
+.site__footer {
+	@include rhythm-padding(1,4);
+	color: white;
+	background-color: $site__footer__bg;
+	@include media (large) {
+		top: rhythm(6.5) * -1;
+		position: relative;
+		z-index: 1;
+	}
+}

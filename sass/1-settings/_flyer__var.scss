@@ -1,0 +1,55 @@
+////////////////////////////////////////////
+//
+//  Typography
+$base-font-size: 16px;
+$base-line-unit: 1.333;
+$base-line-height: $base-font-size * $base-line-unit;
+
+$small-font-size: 14px;
+
+$rhythm-unit: "em";
+$round-to-nearest-half-line: true;
+
+$h1: 3.157;
+$h2: 2.369;
+$h3: 1.777;
+$h4: 1.333;
+$h5: 1;
+$h6: .75;
+
+////////////////////////////////////////////
+//
+//  Screen
+$screen--large: 60em;
+$screen: 42em;
+
+////////////////////////////////////////////
+//
+//  Grid
+$grid__gutter__width: rhythm(.75);
+
+////////////////////////////////////////////
+//
+//  Color
+
+$orange: #f47422;
+$grey--dark: #221f1f;
+
+$primary__color: $orange;
+$neutral__color: $grey--dark;
+
+$element__body__color: $grey--dark;
+$element__body__bg: $primary__color;
+
+$heading--primary__color: $neutral__color;
+$heading--secondary__color: $primary__color;
+
+$site__header__bg: white;
+$site__content__bg: white;
+$site__footer__bg: $primary__color;
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+.heading {
+	font-family: 'Montserrat', sans-serif;
+	small {		
+    	font-family: 'Open Sans', sans-serif;
+    	letter-spacing: .1em;
+	}
+}
+
+.heading--primary {
+	@extend .heading;
+	color: $heading--primary__color;
+}
+
+.heading--secondary {
+	@extend .heading;
+	color: $heading--secondary__color;
+}
+
+.divider {
+	border: 0 none;
+	&:before {
+		content: "\2014";
+	}
+}

@@ -1,0 +1,68 @@
+%grid__box-sizing {
+	@include box-sizing(border-box);
+}
+
+.content__wrapper {
+	@extend %grid__box-sizing;
+	margin: 0 auto;
+	padding: 0 $grid__gutter__width;
+	max-width: $screen;
+	@include media(large) {
+		max-width: $screen--large;
+	}
+	min-width: 320px;
+}
+
+.grid {
+	@extend %grid__box-sizing;
+	margin: 0 $grid__gutter__width * -1;
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+.grid--inline {
+	@extend .grid;
+	> li {
+		display: block;
+		@include media(large) {
+			display: inline-block;
+		}
+	}
+}
+[class*="grid__col"] {
+	@extend %grid__box-sizing;
+	padding: 0 $grid__gutter__width;
+	@include media (large) {
+		float: left;
+	}
+}
+[class*="list__col"] {
+	@extend %grid__box-sizing;
+	padding: 0 $grid__gutter__width;
+}
+@include media (large) {
+	.grid__col--1 {
+		width: percentage(2/10);
+	}
+	.grid__col--3 {
+		width: percentage(8/10);
+	}
+	.grid__offset--1 {
+		margin-left: percentage(2/10);
+	}
+	.list__col--1 {
+		width: percentage(2/10);
+	}
+	.list__col--heading {
+		margin-left: rhythm(.2) * -1;
+	}
+}
+
+
+
+
+
+
+

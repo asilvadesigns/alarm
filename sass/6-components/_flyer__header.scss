@@ -1,0 +1,4 @@
+.site__header {
+    @include padding-leader(2);
+	background-color: $site__header__bg;
+}

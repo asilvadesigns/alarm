@@ -1,0 +1,7 @@
+.site__content {
+	background-color: $site__content__bg;
+	@include padding-trailer(1);
+	@include media (large) {
+		@include padding-trailer(0);
+	}
+}
