@@ -1,6 +1,9 @@
 .content__wrapper {
 	margin: 0 auto;
+	padding: 0 rhythm(1.5);
 	max-width: 32em;
+	min-width: 280px;
+	@include box-sizing(border-box);
 }
 
 .content__section {
