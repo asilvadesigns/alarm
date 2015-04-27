@@ -30,6 +30,8 @@ $element__body__bg: lighten($neutral__color,60%);
 $site__header__bg: $primary__color;
 $site__content__bg: white;
 $site__footer__bg: lighten($neutral__color,60%);
+$site__footer__color: lighten($neutral__color,10%);
+$site__footer__link__color: $neutral__color;
 
 $heading--primary__color: $primary__color;
 $heading--secondary__color: $neutral__color;

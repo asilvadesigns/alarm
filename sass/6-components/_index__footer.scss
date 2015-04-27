@@ -1,4 +1,11 @@
 .site__footer {
 	@include rhythm-padding(2,1);
+	color: $site__footer__color;
 	background-color: $site__footer__bg;
+	a {
+		color: $site__footer__link__color;
+		&:hover, &:active, &:focus {
+			color: darken($site__footer__link__color, 10%);
+		}
+	}
 }
