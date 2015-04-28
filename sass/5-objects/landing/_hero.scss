@@ -37,8 +37,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
-    max-height: 600px;
     max-width: 100%;
+    min-width: 320px;
+    min-height: 400px;
+    @include media(tablet) {
+        max-height: 600px;
+    }
 }
 
 .hero__aside {
@@ -51,11 +55,30 @@
     .btn {
         border: rhythm(.1) solid;
     }
+    float: right;
+    width: percentage(1/1);
+    text-align: right;
+    @include media(tablet) {
+        text-align: left;
+        width: percentage(3/6);
+    }
+    @include media(desktop) {
+        text-align: left;
+        width: percentage(2/6);
+    }
 }
 
 .hero__container {
-    left: 50%;
-    margin-left: $grid__container__width/2 * -1;
-    top: rhythm(7);
     position: absolute;
+    width: 100%;
+    top: rhythm(1);
+    @include media(tablet) {
+        top: rhythm(3);
+    }
+    @include media(desktop) {
+        top: rhythm(5);
+        left: 50%;
+        margin-left: $grid__container__width/2 * -1;
+        width: $grid__container__width;
+    }
 }

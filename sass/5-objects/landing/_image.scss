@@ -1,7 +1,10 @@
 .image {
 	max-width: 100%;
 }
-.image--logo {
+.image--logo-h {
+	@extend .image;
+}
+.image--logo-v {
 	@extend .image;
 	@include margin-trailer(2);
 }

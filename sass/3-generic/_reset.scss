@@ -52,4 +52,7 @@ footer, header, hgroup, menu, nav, section {
 a {
 	color: inherit;
     text-decoration: none;
+    &:hover {
+    	cursor: pointer;
+    }
 }

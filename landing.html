@@ -17,8 +17,8 @@
 			<nav class="nav--secondary">
 				<div class="container">
 					<ul class="nav__list">
-						<li class="nav__item"><a href="" class="nav__link">asociarse con nosotros</a></li>
-						<li class="nav__item"><a href="" class="nav__link">contáctenos</a></li>
+						<li class="nav__item--tablet"><a href="" class="nav__link">asociarse con nosotros</a></li>
+						<li class="nav__item--tablet"><a href="" class="nav__link">contáctenos</a></li>
 						<li class="nav__item"><a href="" class="nav__link">login</a></li>
 						<li class="nav__item--search"><input class="nav__search" type="text" placeholder="buscar"></li>
 					</ul>
@@ -27,14 +27,20 @@
 			<nav class="nav--primary">
 				<div class="container">
 					<figure class="nav__logo">
-						<img src="img/landing/logo--horizontal.png" alt="Alarm.com Horizontal Logo">
+						<img class="nav__logo-h" src="img/landing/logo--horizontal.png" alt="Alarm.com Horizontal Logo">
+						<img class="nav__logo-s" src="img/landing/logo--symbol.png" alt="Alarm.com Horizontal Logo">
 					</figure>
 					<ul class="nav__list">
-						<li class="nav__item"><a href="" class="nav__link">soluciones</a></li>
-						<li class="nav__item"><a href="" class="nav__link">productos y servicios</a></li>
-						<li class="nav__item"><a href="" class="nav__link">acerca de</a></li>
-						<li class="nav__item"><a href="" class="nav__link">socios</a></li>
-						<li class="nav__item"><a href="" class="nav__link">empezar</a></li>
+						<li class="nav__item">
+							<a class="nav__link--collapse collapsed" data-toggle="collapse" data-target="#nav">Menu</a>
+						</li>
+						<ul id="nav" class="nav__list--collapse collapse">
+							<li class="nav__item"><a href="" class="nav__link">soluciones</a></li>
+							<li class="nav__item"><a href="" class="nav__link">productos y servicios</a></li>
+							<li class="nav__item"><a href="" class="nav__link">acerca de</a></li>
+							<li class="nav__item"><a href="" class="nav__link">socios</a></li>
+							<li class="nav__item"><a href="" class="nav__link">empezar</a></li>
+						</ul>
 					</ul>
 				</div>
 			</nav>
@@ -43,22 +49,23 @@
 			<section class="hero">
 				<div class="hero__banner FlexEmbed FlexEmbed--4by3"></div>
 				<div class="hero__container container">
-					<div class="grid--right">
-						<aside class="hero__aside grid__col--2">
+					<div class="grid">
+						<aside class="hero__aside grid__col--">
 							<h2 class="heading">Mantenga a Su Familia Seguro</h2>
 							<h3 class="h4 heading heading--adjust">Con Alertas Comunal Apoyado por el National Crime Prevention Council.</h3>
-			   				<p><a href="" class="h4 btn">aprende más</a></p>
+			   				<p><a href="#hero__anchor" class="h4 btn">aprende más</a></p>
 						</aside>
 					</div>
 				</div>
 			</section>
+			<div id="hero__anchor"></div>
 			<section class="container">
 				<header class="header--centered">
-					<img class="image--logo" src="img/landing/logo--vertical.jpg" alt="Alarm.com Vertical Logo">
+					<img class="image--logo-v" src="img/landing/logo--vertical.jpg" alt="Alarm.com Vertical Logo">
 					<h2 class="heading--secondary">Su Hogar en Sus Manos<sup>™</sup></h2>
 					<h2 class="heading--primary"><sup>*</sup>Averiguar Sobre:</h2>
 				</header>
-				<div class="grid--row">
+				<div class="grid">
 					<div class="grid__col--3">
 						<div class="media">
 							<div class="media__image">
@@ -82,7 +89,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="grid--row">
+				<div class="grid">
 					<div class="grid__col--3">
 						<div class="media">
 							<div class="media__image">
@@ -134,6 +141,8 @@
 			</div>
 		</footer>
 	</main>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

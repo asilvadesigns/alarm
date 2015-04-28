@@ -8,7 +8,7 @@
     font-family: 'Montserrat', sans-serif;
 	color: white;
 	background-color: $site__footer__bg;
-	@include margin-leader(3);
+	@include margin-leader(4);
 	@include rhythm-padding(2,3);
 	nav {
 		li:not(:first-child):before {

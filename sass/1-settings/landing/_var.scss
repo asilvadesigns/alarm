@@ -5,6 +5,8 @@ $base-font-size: 16px;
 $base-line-unit: 1.333;
 $base-line-height: $base-font-size * $base-line-unit;
 
+$small-font-size: 14px;
+
 $rhythm-unit: "em";
 $round-to-nearest-half-line: true;
 
@@ -19,9 +21,12 @@ $h6: .75;
 //
 //  Grid
 
-$grid__gutter__width: rhythm(.5);
+$grid__gutter__width: rhythm(1);
 
 $grid__container__width: 70em;
+$grid__container__width--nav__logo: 64em;
+$grid__container__width--tablet: 50em;
+$grid__container__width--mobile: 30em;
 
 
 ////////////////////////////////////////////

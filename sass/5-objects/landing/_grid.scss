@@ -15,7 +15,7 @@
 	@extend %grid__clearfix;
 	margin: 0 auto;
 	padding: 0 $grid__gutter__width;
-	width: $grid__container__width;
+	max-width: $grid__container__width;
 	min-width: 320px;
 	position: relative;
 }
@@ -30,31 +30,25 @@
 		display: block;
 	}
 }
-.grid--row {
-	@extend .grid;
-	& + & {
-		@include margin-leader(2);
-	}
-}
-.grid--right {
-	@extend .grid;
-	[class*="grid__col"] {
-		float: right;
-	}
-}
 [class*="grid__col"] {
 	@extend %grid__box-sizing;
 	padding: 0 $grid__gutter__width;
-	float: left;
+	@include margin-leader(2);
+	@include media(tablet) {
+		float: left;
+	}
 }
-.grid__col--2 {
-	width: percentage(2/6);
-}
-.grid__col--3 {
-	width: percentage(3/6);
-}
-.grid__col--4 {
-	width: percentage(4/6);
+
+@include media(tablet) {
+	.grid__col--2 {
+		width: percentage(2/6);
+	}
+	.grid__col--3 {
+		width: percentage(3/6);
+	}
+	.grid__col--4 {
+		width: percentage(4/6);
+	}
 }
 .media {
 

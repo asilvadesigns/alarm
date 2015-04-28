@@ -1,0 +1,22 @@
+@mixin media($type) {
+    @if $type == desktop {
+        @media only screen and (min-width: $grid__container__width) {
+            @content;
+        }
+    }
+    @elseif $type == nav__logo {
+        @media only screen and (min-width: $grid__container__width--nav__logo) {
+            @content;
+        }
+    }
+    @elseif $type == tablet {
+        @media only screen and (min-width: $grid__container__width--tablet) {
+            @content;
+        }
+    }
+    @elseif $type == mobile {
+        @media only screen and (min-width: $grid__container__width--mobile) {
+            @content;
+        }
+    }
+}
