@@ -26,7 +26,7 @@ $grid__gutter__width: rhythm(1);
 $grid__container__width: 70em;
 $grid__container__width--nav__logo: 64em;
 $grid__container__width--tablet: 50em;
-$grid__container__width--mobile: 30em;
+$grid__container__width--mobile: 40em;
 
 
 ////////////////////////////////////////////
@@ -55,4 +55,6 @@ $hero__aside__color: white;
 $heading--primary__color: $primary__color;
 $heading--secondary__color: $neutral__color;
 
-$site__footer__bg: $primary__color;
+$btn--primary__bg: $primary__color;
+
+$site__footer__bg: $neutral__color;

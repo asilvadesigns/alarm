@@ -3,3 +3,20 @@
 	padding: rhythm(.25) rhythm(.75);
     @include border-radius(rhythm(.15));
 }
+
+.btn--primary {
+	@extend .btn;
+	padding: rhythm(.35) rhythm(1);
+	color: white;
+	background-color: $btn--primary__bg;
+	@include box-shadow(0 4px 0px darken($btn--primary__bg, 10%));
+	border-bottom: 1px solid rgba(0,0,0,0.15);
+	&:hover, &:focus {
+		background-color: lighten(saturate($btn--primary__bg, 10%), 5%);
+	}
+	&:active {
+		position: relative;
+		top: 4px;
+		box-shadow: none;
+	}
+}

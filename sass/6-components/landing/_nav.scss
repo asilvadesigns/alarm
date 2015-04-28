@@ -48,9 +48,9 @@
 .nav__list {
 	list-style: none;
 	float: right;
+	height: auto!important;
 }
 .nav__list--collapse {
-	@extend .nav__list;
 	text-align: right;
 	// display: none;
 	@include media(tablet) {
@@ -64,43 +64,14 @@
 	&:not(:first-child) {
 		margin-left: rhythm(1.5);
 	}
-}
-.nav__item--tablet {
-	@extend .nav__item;
-	display: none;
-	@include media(tablet) {
-		display: inline-block;
-	}
-}
-
-.nav__link {
-	display: block;
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	letter-spacing: rhythm(.05);
-}
-.nav__link--collapse {
-	@extend .nav__link;
-	text-align: right;
-	display: block;
-	@include media(tablet) {
+	&.hide--tablet {
 		display: none;
+		@include media(tablet) {
+			display: inline-block;
+		}
 	}
 }
 
-.nav__search {
-	@extend .nav__link;
-	color: $nav__search__color;
-	background-color: $nav__search__bg;
-	border: 0 none;
-	@include border-radius(rhythm(.2));
-	padding: rhythm(.35) rhythm(.5);
-	max-width: rhythm(6);
-	&::-moz-placeholder {
-		color: $nav__search__color;
-	}
-
-}
 .nav__item--search {
 	@extend .nav__item;
 	position: relative;
@@ -114,20 +85,46 @@
 	}	
 }
 
-.nav__logo {
-	position: absolute;
-	top: rhythm(.65) * -1;
-	left: $grid__gutter__width;
-}
-
-.nav__logo-h {
-	display: none;
-	@include media(nav__logo) {
+.nav__item--collapsed {
+	.nav__link {
+		text-align: right;
 		display: block;
+		@include media(tablet) {
+			display: none;
+		}
+		color: $primary__color;
+		&.collapsed {
+			color: $neutral__color;
+		}
 	}
 }
-.nav__logo-s {
-	@include media(nav__logo) {
-		display: none;
+
+.nav__link, .nav__search {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: rhythm(.05);
+}
+
+
+.nav__search{
+	color: $nav__search__color;
+	background-color: $nav__search__bg;
+	border: 0 none;
+	@include border-radius(rhythm(.2));
+	padding: rhythm(.35) rhythm(.5);
+	max-width: rhythm(6);
+
+}
+
+.nav__logo {
+	position: absolute;
+	top: rhythm(.15) * -1;
+	left: $grid__gutter__width;
+	img {
+		width: rhythm(9);
+		@include media(nav__logo) {
+			display: block;
+		}
 	}
 }

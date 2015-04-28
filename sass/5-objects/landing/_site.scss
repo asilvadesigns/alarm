@@ -4,6 +4,9 @@
 .site__content {
 	// @include rhythm-padding(2);
 }
+.site__action {
+	@include margin-leader(4);
+}
 .site__footer {
     font-family: 'Montserrat', sans-serif;
 	color: white;

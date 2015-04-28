@@ -1,12 +1,11 @@
 .image {
 	max-width: 100%;
 }
-.image--logo-h {
-	@extend .image;
-}
+
 .image--logo-v {
 	@extend .image;
 	@include margin-trailer(2);
+	width: rhythm(8);
 }
 .image--icon {
 	@extend .image;

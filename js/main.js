@@ -1,54 +1,18 @@
 ////////////////////////////
 //
-// Show Buttons
+// https://css-tricks.com/snippets/jquery/smooth-scrolling/
 
-// $(".container--sticky").stick_in_parent({
-//     offset_top: -20
-// });
-
-////////////////////////////
-//
-// Show Buttons
-
-$("[data-target='input__check']").each(function() {
-
-    $(this).click(function() {
-        $(this).toggle(this.checked);
-        $(this).toggleClass("ischecked");
-
-        var inputsChecked = $(".ischecked");
-
-        if (inputsChecked.length < 1) {
-            $(".button__check").attr('disabled', true);
-        } else if (inputsChecked.length >= 1) {
-            $(".button__check").removeAttr('disabled');
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top
+                }, 500);
+                return false;
+            }
         }
-
     });
-
 });
-
-
-////////////////////////////
-//
-// Change Folders display
-
-// Set default state
-$("#folders__display--grid").attr('disabled', true);
-
-// On click toggle
-$("#folders__display--list").click(function() {
-    $("#folders__display--parent").removeClass("folders").addClass("folders--list");
-    $(this).attr('disabled', true);
-    $("#folders__display--grid").removeAttr('disabled');
-});
-
-$("#folders__display--grid").click(function() {
-    $("#folders__display--parent").removeClass("folders--list").addClass("folders");
-    $(this).attr('disabled', true);
-    $("#folders__display--list").removeAttr('disabled');
-});
-
-////////////////////////////
-//
-// Search Focus

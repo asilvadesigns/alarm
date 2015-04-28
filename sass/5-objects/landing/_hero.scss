@@ -3,25 +3,24 @@
     display: block;
     overflow: hidden;
     position: relative;
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+    }
 }
 
-.FlexEmbed:before {
-    content: "";
-    display: block;
-    width: 100%;
-}
+// .FlexEmbed--3by1:before {
+//     padding-bottom: 33.33333%;
+// }
 
-.FlexEmbed--3by1:before {
-    padding-bottom: 33.33333%;
-}
+// .FlexEmbed--2by1:before {
+//     padding-bottom: 50%;
+// }
 
-.FlexEmbed--2by1:before {
-    padding-bottom: 50%;
-}
-
-.FlexEmbed--16by9:before {
-    padding-bottom: 56.25%;
-}
+// .FlexEmbed--16by9:before {
+//     padding-bottom: 56.25%;
+// }
 
 .FlexEmbed--4by3:before {
     padding-bottom: 75%;
@@ -39,9 +38,20 @@
     margin: 0 auto;
     max-width: 100%;
     min-width: 320px;
-    min-height: 400px;
-    @include media(tablet) {
-        max-height: 600px;
+    height: 350px;
+    &:before {
+        background-color: rgba(0,0,0,0.5);
+        height: 100%;
+    }
+    @include media(mobile) {
+        &:before {
+            background-color: transparent;
+        }
+        height: auto;
+        max-height: 450px;        
+    }
+    @include media(desktop) {
+        max-height: 500px;        
     }
 }
 
@@ -49,21 +59,17 @@
     color: $hero__aside__color;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    .heading + .heading {
-        @include margin-leader(1);
-    }
     .btn {
         border: rhythm(.1) solid;
     }
     float: right;
     width: percentage(1/1);
-    text-align: right;
-    @include media(tablet) {
+    text-align: center;
+    @include media(mobile) {
         text-align: left;
         width: percentage(3/6);
     }
     @include media(desktop) {
-        text-align: left;
         width: percentage(2/6);
     }
 }
@@ -72,11 +78,10 @@
     position: absolute;
     width: 100%;
     top: rhythm(1);
-    @include media(tablet) {
+    @include media(mobile) {
         top: rhythm(3);
     }
     @include media(desktop) {
-        top: rhythm(5);
         left: 50%;
         margin-left: $grid__container__width/2 * -1;
         width: $grid__container__width;

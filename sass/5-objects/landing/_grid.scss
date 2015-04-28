@@ -20,6 +20,11 @@
 	position: relative;
 }
 
+.container--center {
+	@extend .container;
+	text-align: center;
+}
+
 .grid {
 	@extend %grid__box-sizing;
 	@extend %grid__clearfix;
