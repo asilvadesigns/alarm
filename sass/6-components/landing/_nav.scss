@@ -1,0 +1,83 @@
+.nav {
+}
+
+.nav--primary {
+	// @extend .nav;
+	background-color: $nav--primary__bg;
+	@include rhythm-padding(1.25);
+	.nav__list {
+		font-size: .85em;
+	}
+	.nav__link {
+		color: $nav__link__color;
+		&:hover, &:active, &:focus {
+			color: $nav__link__color--hover;
+		}
+	}
+}
+
+.nav--secondary {
+	// @extend .nav;
+	color: darken(white, 10%);
+	background-color: $nav--secondary__bg;
+	@include rhythm-padding(.5);
+	.nav__list {
+		font-size: .75em;
+	}
+	.nav__link {
+		&:hover, &:active, &:focus {
+			color: white;
+		}
+	}
+}
+
+.nav__list {
+	list-style: none;
+	float: right;
+}
+
+.nav__item {
+	display: inline-block;
+	vertical-align: middle;
+	&:not(:first-child) {
+		margin-left: rhythm(1.5);
+	}
+}
+
+.nav__link {
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: rhythm(.05);
+}
+
+.nav__search {
+	@extend .nav__link;
+	color: $nav__search__color;
+	background-color: $nav__search__bg;
+	border: 0 none;
+	@include border-radius(rhythm(.2));
+	padding: rhythm(.35) rhythm(.5);
+	max-width: rhythm(6);
+	&::-moz-placeholder {
+		color: $nav__search__color;
+	}
+
+}
+.nav__item--search {
+	@extend .nav__item;
+	position: relative;
+	&:after {
+		color: $nav__search__color;
+		font-family: 'FontAwesome';
+		content: "\f002";
+		position: absolute;
+		right: rhythm(.75);
+		top: rhythm(.2);
+	}	
+}
+
+.nav__logo {
+	position: absolute;
+	top: rhythm(.65) * -1;
+	left: $grid__gutter__width;
+}

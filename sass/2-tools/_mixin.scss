@@ -1,8 +1,0 @@
-
-@mixin media($type) {
-    @if $type == large {
-        @media only screen and (min-width: $screen--large) {
-            @content;
-        }
-    }
-}

@@ -1,0 +1,13 @@
+.image {
+	max-width: 100%;
+}
+.image--logo {
+	@extend .image;
+	@include margin-trailer(2);
+}
+.image--icon {
+	@extend .image;
+	padding-right: rhythm(1);
+	position: relative;
+	top: rhythm(.5) * -1;
+}

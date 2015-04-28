@@ -1,0 +1,17 @@
+.heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+ }
+
+.heading--secondary {
+	@extend .heading;
+	color: $heading--secondary__color;
+}
+.heading--primary {
+	@extend .heading;
+	color: $heading--primary__color;
+}
+
+.heading--adjust {
+	line-height: $base-line-unit;
+}

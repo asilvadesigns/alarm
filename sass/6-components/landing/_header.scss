@@ -1,0 +1,8 @@
+.header {
+}
+
+.header--centered {
+	// @extend .header;
+	@include rhythm-margins(3,4);
+	text-align: center;
+}

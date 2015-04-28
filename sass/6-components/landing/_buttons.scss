@@ -1,0 +1,5 @@
+.btn {
+	display: inline-block;
+	padding: rhythm(.25) rhythm(.75);
+    @include border-radius(rhythm(.15));
+}

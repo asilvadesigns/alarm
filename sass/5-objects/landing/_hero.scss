@@ -1,0 +1,61 @@
+// http://nicolasgallagher.com/flexible-css-cover-images/
+.FlexEmbed {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.FlexEmbed:before {
+    content: "";
+    display: block;
+    width: 100%;
+}
+
+.FlexEmbed--3by1:before {
+    padding-bottom: 33.33333%;
+}
+
+.FlexEmbed--2by1:before {
+    padding-bottom: 50%;
+}
+
+.FlexEmbed--16by9:before {
+    padding-bottom: 56.25%;
+}
+
+.FlexEmbed--4by3:before {
+    padding-bottom: 75%;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero__banner {
+    background-image: url("../img/landing/banner.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    max-height: 600px;
+    max-width: 100%;
+}
+
+.hero__aside {
+    color: $hero__aside__color;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    .heading + .heading {
+        @include margin-leader(1);
+    }
+    .btn {
+        border: rhythm(.1) solid;
+    }
+}
+
+.hero__container {
+    left: 50%;
+    margin-left: $grid__container__width/2 * -1;
+    top: rhythm(7);
+    position: absolute;
+}
